@@ -206,7 +206,19 @@ typeof Symbol("id") // "symbol"
 
 String, number, object, undefined, symbol, null, boolean AND typeof operator that takes arguments and returns there data type hence “type of”.
 
-#Strings
+#Strings:
 Strings are a way for us to visualize and see text on web browsers. 
 Concatenating: In programming it is used to join strings or join objects together. This is used with the “+” operator.
+
+Number Object: can convert strings into numbers
+
+var convert = “612”
+
+mathConvert= Number(convert)
+
+
+toString: can be used to convert numbers into strings
+var myNum = 123;
+var myString = myNum.toString();
+typeof myString;
 
