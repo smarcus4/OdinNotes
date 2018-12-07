@@ -2,26 +2,26 @@
 Notes taken throughout the Project Odin course.
 
 
-The Odin Project
-Introduction to Web Development:
+#The Odin Project
+##Introduction to Web Development:
 
-Web Developers: Primary focus is to create and publish websites onto the internet for clients including non-profits, government, or private companies.
+**Web Developers:** Primary focus is to create and publish websites onto the internet for clients including non-profits, government, or private companies.
 
-The Internet: The internet is a network of linked computers that are constantly communicating to one another.
+**The Internet:** The internet is a network of linked computers that are constantly communicating to one another.
 
-Packets: Packets are information sent from a user to a receiver containing information needed to communicate.
+**Packets: Packets are information sent from a user to a receiver containing information needed to communicate.**
 
-Web Page: is the contents of what you see in your browser.
+**Web Page:** is the contents of what you see in your browser.
 
-Web Server: Contains the code for how the website should look and delivers information to the client side.
+**Web Server:** Contains the code for how the website should look and delivers information to the client side.
 
-Web Browser: A piece of software that displays webpages.
+**Web Browser:** A piece of software that displays webpages.
 
-Search Engine: A Search engine is a web server that searches the internet(all computers linked together) for information. We as users can use a webpage within a web browser to find and locate web pages and view them.
+**Search Engine:** A Search engine is a web server that searches the internet(all computers linked together) for information. We as users can use a webpage within a web browser to find and locate web pages and view them.
 
-Client: The client computer is the computer that asks for information from the server. The client can also be thought of as our computer.
+**Client:** The client computer is the computer that asks for information from the server. The client can also be thought of as our computer.
 
-Server: The server receives requests from the client in the form of packets and responds with information/data to display.
+**Server:** The server receives requests from the client in the form of packets and responds with information/data to display.
 
 DNS Servers: also considered the phone book of the internet. DNS converts the IP addresses into easily readable domain names (github.io).
 
@@ -120,7 +120,7 @@ NaN is the only type of value not equal to itself: var a = NaN, a!==a → true
 
 Markup Language: A language that that defines a specific structure or style and presentation of raw text.
 
-HTML Element: content comprised of tags that contains raw data. <p> <h1> <div> etc are all HTML elements.
+HTML Element: content comprised of tags that contains raw data. <p></p> <h1></h1> <div></div> etc are all HTML elements.
 
 Nesting tags: HTML tags and content within another tag is nested. One nested element is considered to be the child, 2 would be the grandchild of the respective element.
 
