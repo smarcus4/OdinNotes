@@ -3,6 +3,7 @@ Notes taken throughout the Project Odin course.
 
 
 #The Odin Project
+
 ##Introduction to Web Development:
 
 **Web Developers:** Primary focus is to create and publish websites onto the internet for clients including non-profits, government, or private companies.
@@ -221,4 +222,155 @@ toString: can be used to convert numbers into strings
 var myNum = 123;
 var myString = myNum.toString();
 typeof myString;
+
+
+
+
+Primite Values cannot have properties or methods because they are not objects but in Javascript methods and properties are available to strings and other primitive values because they are treated like objects.
+
+var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var sln = txt.length;
+
+Indexof(): this method returns the index or position of the first occurence of a specified text.
+
+Lastindexof(): returns the last index or position of the specified text
+
+Both return -1 if no value is found
+
+Search(): this method searches a string for a specified value and returns the position.
+
+Search() cannot take a second start position value unlike Indexof but Search() can take regular expressions which indexof() cannot.
+
+Methods for Extracting Strings:
+There are 3 methods to extract parts of strings.
+slice(start,end)
+substring(start,end)
+substr(start, length)
+
+Splice: This method takes part of the string and returns the extracted part into a string. This method requires a start position and end position parameter that will be extracted. If the parameter is negative the position is determined from the end of the string.
+
+Substring: This method acts the same as Slice but it cannot take negative parameter values.
+
+Substr: This method is similar to Slice except that the second parameter is the length of the returned string. If not length is specified Substr will slice out the rest of the string. This method can take negative parameters that count from the end of the string.
+var str = "Apple, Banana, Kiwi";
+var res = str.substr(7);
+Banana, Kiwi
+
+Replace: The Replace method takes a specified value and replaces it with another one.
+str = "Please visit Microsoft!";
+var n = str.replace("Microsoft", "W3Schools");
+Result: Please visit W3Schools!
+
+Replace is case sensitive and can only return the first value it finds
+
+Regular expressions: these expressions can be used to find global matches and overcome the obstacle of case sensistivity.
+str = "Please visit Microsoft and Microsoft!";
+var n = str.replace(/Microsoft/g, "W3Schools");
+//   /g is the global regular expression and does not take double or single or backticks to be represented.
+
+
+Touppercase() and tolowercase(): methods used to convert strings to upper and lower case.
+
+concat(): this method brings 2 or more strings together similarly to the operator “+”.
+var text1 = "Hello";
+var text2 = "World";
+var text3 = text1.concat(" ", text2);
+
+Trim(): The trim method removes white space around the string in order to return the desired result and not extra white space that could cause problems later on. 
+
+
+Methods for Extracting String Characters:
+charAt(position)
+charCodeAt(position)
+Property access []
+
+charAt(): this method returns the character from a specified position within a string.
+var str = "HELLO WORLD";
+str.charAt(0);            // returns H
+
+charCodeAt(): This method returns the unicode of the character at a specific index. It returns a UTF-16 code (integer).
+
+Split a String into an array using Split() to omit separators.
+
+
+Conditionals and Operators:
+
+==: checks to see if values match
+===: checks to see if values and types match
+
+Comparison Operators: Comparison operators convert null into a number.
+
+|| OR : used to compare left to right, expressions and will find the first truthy value or return the last operand.
+
+&& AND: used to compare left to right, expressions and will find the first false value or return the last operand.
+
+When to use if and else and switch:
+Use if to specify a block of code to be executed, if a specified condition is true
+Use else to specify a block of code to be executed, if the same condition is false
+Use else if to specify a new condition to test, if the first condition is false
+Use switch to specify many alternative blocks of code to be executed
+
+Switch Statements: Take a single expression or value as an input that compares it through a list of choices to find a match that then executes the code associated with that value.
+switch (expression) {
+  case choice1:
+    run this code
+    break;
+
+  case choice2:
+    run this code instead
+    break;
+    
+  // include as many cases as you like
+
+  default:
+    actually, just run this code
+}
+
+******Tenary Operator*******: An operator that takes one condition and returns one value or expression if it true and one value or expression if false.
+
+**Switch Cases**: evaluate and expression and runs a block of code with the matching case.
+	Default: Acts as an “else” in Switch statements
+
+
+Dev Tools Part 2:
+
+DOM -  Document object model vs HTML - when a page is loaded it gathers and loads all the initial HTML code to the page. The current representation of the page is also known as the DOM, which can be changed over time.	
+
+Console logs: Console log can be used to view relevant information in the console window in Dev Tools. It can be used to debug and view diagnostic code. 
+	console.error(): can be used to console log potential errors in the code
+	console.warn(): can be used to warn or caution for potential problems.
+-not: operator used to show every message in console log that does not contain “not”
+
+REPL: The console acts as a REPL (Read, Evaluate, Print, Loop). This allows us to write javascript code in the console and run it.
+
+****An iframe element lets you embed a page within another page, without giving that sub-page access to your main page. This is how most ads on the web are distributed.*****
+
+
+Fundamentals Part 3:
+Methods: Are defined as being built in browser functions. Methods are defined inside of objects and their variables(properties), make code run efficiently and easier to handle.
+
+Invoking a function: The method used to call or use a function after it has been defined with code blocks.
+
+Anonymous function: a functioned defined as having no name and being “anonymous.
+  
+Can be used as such:
+var myButton = document.querySelector('button');
+
+myButton.onclick = function() {
+  alert('hello');
+}
+Funcion assignment: functions can also be assigned to variables and invoked by that variable name:
+var anotherGreeting = function() {
+  alert('hello');
+}
+Parameters: inside the function() parathesis, the values stored are known as the function parameters. This is used to pass values from function to function and accept various inputs.
+
+Scope: Function scope is defined by the different compartments that the code variables are stored under. Global and local are the two main types of scopes.
+	Global Scope: can be accessed by any function and variable within the code.
+	Local Scope: can be accessed by the function it lays within or
+
+Return Values: values returned to the function when it completes.
+
+
+
 
