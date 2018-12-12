@@ -372,5 +372,24 @@ Scope: Function scope is defined by the different compartments that the code var
 Return Values: values returned to the function when it completes.
 
 
+Shadow Variables:  variables declared inside a function i.e. let x = 9 as opposed to reassigning the global variable x=9.
 
+Default Value: Parameter values not provided will become “undefined”. To avoid this a default value can be assigned to the arguments 
+function showMessage(from, text = "no text given") {
+  alert( from + ": " + text );
+}
 
+showMessage("Ann"); // Ann: no text given
+
+Instead of a value “Text” can also be assigned a complex expression such as an entire function if no parameter is set.
+
+***A function with an empty return or without it returns undefined***
+If a function does not return a value, it is the same as if it returns undefined:function doNothing() { /* empty */ }
+
+alert( doNothing() === undefined ); // true
+Never add a new line when using return or else javascript will interpret it as a semicolon thus rendering it undefined.
+
+Naming a function: always use some type of verb as the prefix when naming a function such as get, create, calc  and then add what that function will do such as getScores, createForm, calcAnswer.
+Values passed to a function as parameters are copied to its local variables.
+A function may access outer variables. But it works only from inside out. The code outside of the function doesn’t see its local variables.
+A function can return a value. If it doesn’t, then its result is undefined.
