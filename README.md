@@ -393,3 +393,63 @@ Naming a function: always use some type of verb as the prefix when naming a func
 Values passed to a function as parameters are copied to its local variables.
 A function may access outer variables. But it works only from inside out. The code outside of the function doesn’t see its local variables.
 A function can return a value. If it doesn’t, then its result is undefined.
+Function Expression: var sayHi = function()
+
+function sayHi() {   // (1) create
+  alert( "Hello" );
+}
+
+let func = sayHi;    // (2) copy
+
+func(); // Hello     // (3) run the copy (it works)!
+sayHi(); // Hello    //     this still works too (why wouldn't it)
+Here’s what happens above in detail:
+The Function Declaration (1) creates the function and puts it into the variable named sayHi.
+Line (2) copies it into the variable func.
+Please note again: there are no parentheses after sayHi. If there were, then func = sayHi() would writethe result of the call sayHi() into func, not the function sayHi itself.
+Now the function can be called as both sayHi() and func().
+**Using the parenthesis when assigning a function to a variable copies the result into the variable whereas stating the function name copies the source code into it.**
+
+Code blocks and other syntax structures do not require semicolons at the end such as function declarations, if, for, while etc. function expressions require them not because of the function, but because the statement needs to be closed e.g. a variable being assigned a function needs a semicolon to end it.
+
+Call Back or Callbacks functions: functions that contain other functions as arguments within their parameters to be invoked at a later time and displayed or used sequentially. 
+
+**values such as strings and numbers are representative of data when functions represent actions being taken.
+
+Function Declaration: function exampleFunction(){   “code here” }
+	A function declared as a separate statement in the main code of flow.
+Function Expression: var abc = function(){ “code here “ };
+	A function created inside an expression or other inside another syntax
+
+Function Declaration vs Function Expression:
+Function Expressions flow from left to right, once the right side(the function declaration) is reached the function is created and can be used from that point onward. Function expressions are created when the code execution reaches them.
+sayHi("John"); // error!
+
+let sayHi = function(name) {  // (*) no magic any more
+  alert( `Hello, ${name}` );
+};
+
+
+Function Declarations are prepared at the start of the script runtime similar to an initialization stage, which they can then be used for execution. NOTE: because of this a function can be declared before it is assigned.
+sayHi("John"); // Hello, John
+
+function sayHi(name) {
+  alert( `Hello, ${name}` );
+}
+
+When a Function Declaration is made within a code block, it is visible everywhere inside that block. But not outside of it.
+
+Arrow function: let func = (arg1, arg2, ...argN) => expression
+Summary
+Functions are values. They can be assigned, copied or declared in any place of the code.
+If the function is declared as a separate statement in the main code flow, that’s called a “Function Declaration”.
+If the function is created as a part of an expression, it’s called a “Function Expression”.
+Function Declarations are processed before the code block is executed. They are visible everywhere in the block.
+Function Expressions are created when the execution flow reaches them.
+In most cases when we need to declare a function, a Function Declaration is preferable, because it is visible prior to the declaration itself. That gives us more flexibility in code organization, and is usually more readable.
+So we should use a Function Expression only when a Function Declaration is not fit for the task. We’ve seen a couple of examples of that in this chapter, and will see more in the future.
+Arrow functions are handy for one-liners. They come in two flavors:
+Without curly braces: (...args) => expression – the right side is an expression: the function evaluates it and returns the result.
+With curly braces: (...args) => { body } – brackets allow us to write multiple statements inside the function, but we need an explicit return to return something.
+
+
