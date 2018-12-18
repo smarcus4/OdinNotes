@@ -453,3 +453,28 @@ Without curly braces: (...args) => expression – the right side is an expressio
 With curly braces: (...args) => { body } – brackets allow us to write multiple statements inside the function, but we need an explicit return to return something.
 
 
+**Fundamentals of Javascript Part 4**
+
+Arrays:  a special variable that can hold more than one value at a time.
+var array_name = [item1, item2, ...];  
+In JavaScript, arrays use numbered indexes.  
+In JavaScript, objects use named indexes.
+
+toString(): method that converts array into strings separated by commas.
+join(): method that joins array elements into a string and allows the method to have the join separator specific e.g. join(“ * “) array broken in to strings separated by *.
+pop(): used to take items out of an array
+push(): used to push items into an array.
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits[fruits.length] = "Kiwi";          // Appends "Kiwi" to fruits
+
+loops:
+Counter: used to keep track of the start of the loop
+Exit condition: a way to exit the loop after a condition is met
+Iterator: a way to increment the counter by a small amount for each successful loop until an exit condition is met.
+
+Test Driven Development(TDD): it describes writing automated tests that describe how the code should function.
+
+
+
+
+
