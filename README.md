@@ -479,6 +479,45 @@ The filter() method creates a new array with all elements that pass the test imp
 	
 Spread syntax allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.
 
+The DOM:
+
+DOM Document Object Model: tree like representation of the contents on a webpage referring to different nodes on the tree and how they relate to one another (parent, child, sibling, etc).
+
+Working with the DOM: when working with the DOM, we will use selectors to target specific nodes that we wish to work with. In one example we can use CSS Style selectors and the relationship properties of the nodes(parent, child etc) to edit and alter site content.
+	<div class="display"></div>:
+	We can use different selector options to grab the class “display”
+		
+div.display
+.display
+#container > .display
+div#container > div.display
+When HTML code is parsed by web browsers it is converted to the DOM. Each of the nodes act as objects with various methods and properties attached to them. We will use these methods and properties to manipulate our web pages with javascript. 
+
+Query Selectors:
+ element.querySelector(selector) returns a reference to the first match of selector.
+element.querySelectAll(selectors) returns a nodelist containing all references that match the selectors 
+
+When using querySelectAll(selectors) the return value is not in the form of an array. It will look like an array, but it is really a nodelist. Methods in nodelist are different than methods that can be applied to arrays. Convert the nodelist to an array should a problem arise with Array.from() or spread operator.
+
+Element Creation: document.createElement(tagName,[options]) will create a new element with a tagName with a specific tag type (p, div, etc) and options in this case refers to various parameters when initializing the new tag. This does not place the new element onto the DOM just yet, but it is stored in the memory.
+
+Appending Elements:
+parentNode.appendChild(childNode) appends childNode as the last child of parentnode.
+parentNode.insertBefore(newNode, referenceNode) inserts a newNode into parentNode before referenceNode.
+Removing Elements:
+parentNode.removeChild(child) removes child from parentNode on the DOM and returns reference to child. Reference as in a variable assigned to the DOM element using a selector.
+div.setAttribrute(type(id), name),  div.getAttribute(id), div.removeAttribute(‘id’)
+
+div.setAttribute('id', 'theDiv');                              
+// if id exists update it to 'theDiv' else create an id
+// with value "theDiv"
+
+div.getAttribute('id');                                        
+// returns value of specified attribute, in this case
+// "theDiv"
+
+div.removeAttribute('id');                                     
+// removes specified attribute
 
 
 
