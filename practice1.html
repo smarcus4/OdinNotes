@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
@@ -62,4 +62,61 @@
   }
   </script>
 </body>
-</html>
+</html> -->
+<!DOCTYPE html>
+<body>
+  <h1>
+    THE TITLE OF YOUR WEBPAGE
+  </h1>
+  <div id="container"></div>
+  <div id="practiceContainer"></div>
+
+
+
+  <script>
+    const container = document.querySelector('#container');
+
+    const content = document.createElement('div');
+    content.classList.add('content');
+    content.textContent = 'This is the glorious text-content!';
+    
+    container.appendChild(content);
+
+    const test = document.querySelector("#practiceContainer");
+    const testP = document.createElement("p");
+    testP.textContent = "this is my test content";
+    testP.classList.add("testClass");
+
+    test.appendChild(testP);
+
+    const newP = document.createElement("p");
+    newP.classList.add("redClass");
+    newP.textContent = "This is the Red Paragraph";
+
+    newP.style.color = "red";
+
+    container.appendChild(newP);
+
+    const h3text = document.createElement("h3");
+    h3text.textContent = "I am a blue h3";
+    h3text.style.color= "blue";
+
+    container.appendChild(h3text);
+
+    const finalDiv = document.createElement("div");
+   
+    const h1text = document.createElement("h1");
+    h1text.textContent = "Im in a div";
+    const finalP = document.createElement("p");
+    finalP.textContent = "ME TOO";
+
+    finalDiv.appendChild(h1text);
+    finalDiv.appendChild(finalP);
+
+    container.appendChild(finalDiv);
+    finalDiv.style.cssText = "background-color: pink";
+    finalDiv.style.border = " solid black"
+    
+    </script>
+</body>
+<html>

@@ -522,4 +522,36 @@ div.removeAttribute('id');
 
 
 
+Working With Classes:
+
+div.classList.add(“new”);
+Adds the class “new” to the div
+div.classList.remove(“new”);
+Remove “new” class from div
+div.classList.toggle(“active”);
+If div does not have class “active” then add it and if it does then remove it.
+
+Adding Text content:
+
+div.textContent = “Hello World”
+-creates a text node containing Hello World and inserts it into the div
+
+
+div.innerHTML = “<span> Hello World! </span>;
+-renders html inside the div but it can pose a security risk when the html code renders user input.
+
+****note**** Java script alters the DOM, not the HTML file, this means the html will remain the same but then browser will look different because of the html.
+
+Adding Inline Style:
+
+ 
+div.style.color = 'blue';                                      
+// adds the indicated style rule
+
+div.style.cssText = 'color: blue; background: white';         
+// adds several style rules
+
+div.setAttribute('style', 'color: blue; background: white');  
+// adds several style rules
+
 
