@@ -553,5 +553,45 @@ div.style.cssText = 'color: blue; background: white';
 
 div.setAttribute('style', 'color: blue; background: white');  
 // adds several style rules
+div.setAttribute('style', 'color: blue; background: white');  
+// adds several style rules
+Event Listeners:
+
+Three primary ways to use an event listner:
+Include functions in the HTML Attributes, 
+use on_event property in the javascript file such as onclick, 
+or attach event listeners to the nodes in javascript.
+
+ btn.addEventListener('click', function(e){
+ console.log(e.target)
+})
+
+E in the function(e) is an object that references the event itself. It opens up many more useful properties that we can access such as keys pressed, and the DOM node that was clicked. 
+
+btn.addEventListener('click', function(e){
+   e.target.style.background = 'blue'})
+//changes the color of the button to blue
+
+
+
+<div id="container">
+    <button id="1">Click Me</button>
+    <button id="2">Click Me</button>
+    <button id="3">Click Me</button>
+</div>
+
+// buttons is a node list. It looks and acts much like an array.
+const buttons = document.querySelectorAll('button');
+
+// we use the .forEach method to iterate through each button
+buttons.forEach((button) => {
+
+  // and for each one we add a 'click' listener
+  button.addEventListener('click', (e) => {
+    alert(button.id);
+  });
+});
+
+
 
 
