@@ -72,51 +72,75 @@
   <div id="practiceContainer"></div>
 
 
+  <!-- <button onclick="alert('Hello World')">Click Me</button> -->
 
-  <script>
-    const container = document.querySelector('#container');
 
-    const content = document.createElement('div');
-    content.classList.add('content');
-    content.textContent = 'This is the glorious text-content!';
+  <!-- <button id="btn">Click Me</button> -->
+
+  <button id="btn">Click Me Too</button>
+
+
+   <script>
+    // const container = document.querySelector('#container');
+
+    // const content = document.createElement('div');
+    // content.classList.add('content');
+    // content.textContent = 'This is the glorious text-content!';
     
-    container.appendChild(content);
+    // container.appendChild(content);
 
-    const test = document.querySelector("#practiceContainer");
-    const testP = document.createElement("p");
-    testP.textContent = "this is my test content";
-    testP.classList.add("testClass");
+    // const test = document.querySelector("#practiceContainer");
+    // const testP = document.createElement("p");
+    // testP.textContent = "this is my test content";
+    // testP.classList.add("testClass");
 
-    test.appendChild(testP);
+    // test.appendChild(testP);
 
-    const newP = document.createElement("p");
-    newP.classList.add("redClass");
-    newP.textContent = "This is the Red Paragraph";
+    // const newP = document.createElement("p");
+    // newP.classList.add("redClass");
+    // newP.textContent = "This is the Red Paragraph";
 
-    newP.style.color = "red";
+    // newP.style.color = "red";
 
-    container.appendChild(newP);
+    // container.appendChild(newP);
 
-    const h3text = document.createElement("h3");
-    h3text.textContent = "I am a blue h3";
-    h3text.style.color= "blue";
+    // const h3text = document.createElement("h3");
+    // h3text.textContent = "I am a blue h3";
+    // h3text.style.color= "blue";
 
-    container.appendChild(h3text);
+    // container.appendChild(h3text);
 
-    const finalDiv = document.createElement("div");
+    // const finalDiv = document.createElement("div");
    
-    const h1text = document.createElement("h1");
-    h1text.textContent = "Im in a div";
-    const finalP = document.createElement("p");
-    finalP.textContent = "ME TOO";
+    // const h1text = document.createElement("h1");
+    // h1text.textContent = "Im in a div";
+    // const finalP = document.createElement("p");
+    // finalP.textContent = "ME TOO";
 
-    finalDiv.appendChild(h1text);
-    finalDiv.appendChild(finalP);
+    // finalDiv.appendChild(h1text);
+    // finalDiv.appendChild(finalP);
 
-    container.appendChild(finalDiv);
-    finalDiv.style.cssText = "background-color: pink";
-    finalDiv.style.border = " solid black"
-    
-    </script>
+    // container.appendChild(finalDiv);
+    // finalDiv.style.cssText = "background-color: pink";
+    // finalDiv.style.border = " solid black"
+
+    // var btn = document.querySelector('#btn');
+    // btn.onclick = () => alert("Hello World"); 
+    var btn = document.querySelector('#btn');
+    btn.addEventListener('click', () => {
+    alert("Hello World");
+  });
+
+  
+function greeting(name) {
+    alert('Hello ' + name);
+  }
+  
+  function processUserInput(callback) {
+    var name = prompt('Please enter your name.');
+    callback(name);
+  }
+  processUserInput(greeting);
+    </script> 
 </body>
 <html>
